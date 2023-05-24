@@ -17,7 +17,11 @@ from src.exception import CustomException
 
 def export_collection_as_dataframe(collection_name, db_name):
     try:
-        mongo_client = MongoClient(os.getenv("MONGO_DB_URL"))
+        # uniform resource indentifier
+        uri = "mongodb+srv://snshrivas:Snshrivas@cluster0.u46c4.mongodb.net/?retryWrites=true&w=majority"
+
+        # Create a new client and connect to the server
+        mongo_client = MongoClient(uri)
 
         collection = mongo_client[db_name][collection_name]
 
