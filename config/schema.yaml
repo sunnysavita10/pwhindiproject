@@ -1,0 +1,23 @@
+NumberofColumns: 8
+ColumnNames:
+  gender: category
+  race_ethnicity: category
+  parental_level_of_education: category
+  lunch: category
+  test_preparation_course: category
+  math_score: int
+  reading_score: int
+  writing_score: int
+
+Numerical_columns:
+  - writing_score
+  - reading_score
+
+Categorical_columns:
+  - gender
+  - race_ethnicity
+  - parental_level_of_education
+  - lunch
+  - test_preparation_course
+
+target_column: math_score
